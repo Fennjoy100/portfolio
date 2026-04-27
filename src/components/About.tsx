@@ -51,9 +51,9 @@ export function About() {
            initial={{ opacity: 0, y: 30 }}
            animate={inView ? { opacity: 1, y: 0 } : {}}
            transition={{ duration: 0.6, delay: 0.2 }}
-           className="w-full lg:w-auto min-w-[300px]"
+           className="w-full self-center lg:self-start lg:w-auto shrink-0 mt-8 lg:mt-0"
         >
-           <div className="grid grid-cols-2 gap-4">
+           <div className="grid grid-cols-2 gap-4 w-full sm:w-[320px] max-w-sm mx-auto lg:mx-0">
               <div className="dark:bg-slate-950 bg-slate-50 border dark:border-slate-800 border-slate-200 p-6 flex flex-col justify-center rounded-xl min-h-[140px]">
                 <p className="text-4xl font-bold dark:text-white text-slate-900 mb-2">10+</p>
                 <p className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em]">Projects Built</p>

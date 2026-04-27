@@ -13,9 +13,11 @@ export function Hero() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-start text-left"
         >
-          <h2 className="text-indigo-400 font-mono text-xs sm:text-sm font-bold inline-block mb-4 uppercase tracking-[0.3em]">Aspiring MERN Stack Developer</h2>
+          <h2 className="text-indigo-400 font-mono text-xs sm:text-sm font-bold block whitespace-normal mb-4 uppercase tracking-[0.2em] sm:tracking-[0.3em] leading-relaxed max-w-full">
+            Aspiring MERN Stack Developer
+          </h2>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4rem] 2xl:text-[5rem] font-bold tracking-tight dark:text-white text-slate-900 leading-[1.1] mb-6 w-full whitespace-nowrap">
+          <h1 className="text-[6.5vw] md:text-4xl lg:text-5xl xl:text-[4rem] 2xl:text-[5rem] font-bold tracking-tight dark:text-white text-slate-900 leading-[1.1] mb-6 w-full whitespace-nowrap">
             Building Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Experiences.</span>
           </h1>
           
