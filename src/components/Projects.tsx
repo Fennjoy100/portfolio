@@ -13,26 +13,84 @@ interface Project {
   demo?: string;
 }
 
+// Static projects list instead of fetching from API for seamless deployment to Vercel
+const staticProjects: Project[] = [
+  {
+    id: "1",
+    title: "Favourite Student System",
+    description: "A comprehensive student management system designed to track student data, performance, and favorability efficiently.",
+    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&q=80",
+    tags: ["React", "Tailwind CSS"],
+    github: "https://github.com/Fennjoy100",
+    demo: "https://favourite-student-system.vercel.app",
+  },
+  {
+    id: "2",
+    title: "ZenMarket",
+    description: "A modern, minimalist e-commerce platform built for a seamless shopping experience.",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+    tags: ["React", "Vite", "Tailwind CSS"],
+    github: "https://github.com/Fennjoy100",
+    demo: "https://fusion5-5-members-fusion-of-design.vercel.app",
+  },
+  {
+    id: "3",
+    title: "Image Gallery",
+    description: "A visually stunning, responsive image gallery with elegant transitions and high-performance loading.",
+    image: "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=800&q=80",
+    tags: ["React", "CSS3", "JavaScript"],
+    github: "https://github.com/Fennjoy100",
+    demo: "https://image-gallery-seven-rouge.vercel.app",
+  },
+  {
+    id: "4",
+    title: "Netflix Login Page",
+    description: "A pixel-perfect clone of the Netflix login interface, focusing on dark mode aesthetics and responsive forms.",
+    image: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&q=80",
+    tags: ["React", "Tailwind CSS"],
+    github: "https://github.com/Fennjoy100",
+    demo: "https://netflix-login-page-eta-mocha.vercel.app",
+  },
+  {
+    id: "5",
+    title: "Weather Report Application",
+    description: "A dynamic real-time weather forecasting application providing accurate data via weather API integration.",
+    image: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=800&q=80",
+    tags: ["React", "OpenWeather", "Tailwind"],
+    github: "https://github.com/Fennjoy100",
+    demo: "https://weather-report-application-theta.vercel.app",
+  },
+  {
+    id: "6",
+    title: "AI-Powered Translation",
+    description: "A real-time translation tool leveraging advanced AI models to seamlessly translate text across multiple languages.",
+    image: "https://images.unsplash.com/photo-1555421689-d68471e189f2?w=800&q=80",
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/Fennjoy100",
+    demo: "https://fennjoy100.github.io/Real-time-AI-powered-translation/",
+  }
+];
+
 export function Projects() {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [projects] = useState<Project[]>(staticProjects);
+  const [loading] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  useEffect(() => {
-    fetch("/api/projects")
-      .then(res => res.json())
-      .then(data => {
-        setProjects(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error("Failed to fetch projects", err);
-        setLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("/api/projects")
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setProjects(data);
+  //       setLoading(false);
+  //     })
+  //     .catch(err => {
+  //       console.error("Failed to fetch projects", err);
+  //       setLoading(false);
+  //     });
+  // }, []);
 
   return (
     <section id="projects" className="dark:bg-indigo-600 bg-slate-50 border-t dark:border-slate-800 border-slate-200 p-8 md:p-12 lg:p-16 flex flex-col justify-between relative">

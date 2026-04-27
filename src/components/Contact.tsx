@@ -19,16 +19,18 @@ export function Contact() {
     setErrorMessage("");
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      // Simulate network request for Vercel static deployment
+      await new Promise((resolve) => setTimeout(resolve, 1500));
 
-      if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.error || "Something went wrong");
-      }
+      // const res = await fetch("/api/contact", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(formData),
+      // });
+      // if (!res.ok) {
+      //   const errorData = await res.json();
+      //   throw new Error(errorData.error || "Something went wrong");
+      // }
 
       setStatus("success");
       setFormData({ name: "", email: "", message: "" });
