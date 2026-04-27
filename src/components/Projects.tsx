@@ -47,7 +47,7 @@ const staticProjects: Project[] = [
     title: "Netflix Login Page",
     description: "A pixel-perfect clone of the Netflix login interface, focusing on dark mode aesthetics and responsive forms.",
     image: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&q=80",
-    tags: ["React", "Tailwind CSS"],
+    tags: ["React", "Tailwind CSS", "Express"],
     github: "https://github.com/Fennjoy100",
     demo: "https://netflix-login-page-eta-mocha.vercel.app",
   },
